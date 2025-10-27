@@ -1,11 +1,11 @@
 <template>
   <div>
-    <form>
+    <form @submit.prevent="$emit('infoMonedas', cripto, moneda)">
       <div>
         <label>
           Moneda Nacional: 
         </label>
-        <select required>
+        <select v-model="moneda" required>
           <option value="" disabled selected>
             Seleccione una Moneda...
           </option>
@@ -18,7 +18,7 @@
         <label>
           Criptomoneda: 
         </label>
-        <select required>
+        <select v-model="cripto" required>
           <option value="" disabled selected>
             Seleccione una Criptomoneda...
           </option>
@@ -35,6 +35,10 @@
 </template>
 <script>
 export default {
-  
+  data: () => ({
+    moneda: "",
+    cripto: ""
+  })
+
 }
 </script>
