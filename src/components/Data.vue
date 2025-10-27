@@ -30,7 +30,7 @@ export default {
       required: true
     },
     precio: {
-      type: String,
+      type: Number,
       required: true
     }
   }
